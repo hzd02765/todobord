@@ -1,5 +1,6 @@
 <%= form_for(@post) do |f| %>
 
+<%# コメントアウト %>
 <% if @post.errors.any? %>
 <ul>
   <% @post.errors.full_messages.each do |msg| %>
@@ -8,13 +9,15 @@
 </ul>
 <% end %>
 
+<%# タイトル %>
 <div class="field">
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, :size => 75 %>
 </div>
 
 <br>
 
+<%# SUBMITボタン %>
 <div class="action">
   <%= f.submit %>
 </div>
